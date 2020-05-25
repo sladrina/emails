@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+}
+
+body, html { height: 100%; }
+body {
+    font-family: proxima-nova, sans-serif;
+    font-size: 14px;
+    line-height: 1.3em;
+    color: #A9AEB9;
+    background: #EDF0F5;
+}
+
+
+p { margin-bottom: 1.5rem; }
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2em;
+    color: #242B3D;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 { font-size: 52px; }
+h2 { font-size: 42px; }
+h3 { font-size: 30px; }
+h4 { font-size: 24px; }
+h5 { font-size: 20px; }
+h6 { font-size: 16px; }
+
+.shell { max-width: 1200px; margin: 0 auto; }
+
+/* My code */
+.main {
+    padding-top: 80px;
+}
+
+.heading-main {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.heading-main h1 {
+    font-weight: 700;
+}
+
+.hero-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carousel-block {
+    background: #fff;
+    height: 210px;
+    border-radius: 55px;
+    text-align: center;
+    padding: 16px;
+    box-shadow: 0 0 24px rgba(35, 36, 39, 0.03);
+}
+
+.slick-slide {
+    margin: 40px 15px;
+}
+
+.cb-image {
+    width: 88px;
+    height: 88px;
+    background: #E6FAFF;
+    border-radius: 26px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cb-image img {
+    height: 45px;
+}
+
+.cb-content {
+    text-align: center;
+}
+
+.cb-content h4 {
+    margin-bottom: 5px;
+    font-size: 23px;
+}
+
+.cb-content p {
+    margin: 0;
+}
+
+.cb-link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    padding: 2px 6px;
+    background: #53C1DE;
+    border-radius: 8px;
+    position: relative;
+    top: 11px;
+    box-shadow: 0 13px 30px rgba(83,193,222,0.2);
+    transition: background .3s ease-in-out, transform .3s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out;
+    position: relative;
+    display: inline-block;
+    transform: translateY(6px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.carousel-block:hover .cb-link {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+.cb-link:hover {
+    background: #41bada;
+}
+
+.slick-arrow {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -50px;
+    width: 30px;
+    height: 30px;
+    background: grey;
+    border-radius: 50%;
+    border: none;
+    overflow: hidden;
+    text-indent: -9999px;
+    font-size: 0;
+    background-color: transparent;
+    background-image: url('https://svgshare.com/i/HFM.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+    transition: opacity .2s ease;
+    cursor: pointer;
+}
+
+.slick-arrow:hover {
+    opacity: 0.7;
+}
+
+.slick-next {
+    left: auto;
+    right: -50px;
+    background-image: url('https://svgshare.com/i/HG0.svg');
+}
+
+.slick-dots {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.slick-dots li {
+    margin: 0 6px;
+    height: 7px;
+}
+
+.slick-dots li button {
+    width: 7px;
+    height: 7px;
+    border-radius: 5px;
+    font-size: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: #cfd1d8;
+    border: none;
+}
+
+.slick-dots li.slick-active button {
+    background: #B875D0;
+}
+
+.bottom-text {
+    margin: 90px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-text p {
+    margin: 0;
+}
+
+.bottom-text p + p {
+    margin-top: 5px;
+}
+
+.bottom-text a {
+    text-decoration: none;
+    color: #242B3D;
+    transition: color .2s ease;
+}
+
+.bottom-text a:hover {
+    color: #B875D0;
+}
+
+.bottom-text div p:first-child a:hover {
+    color: #7DD075;
+}
+
+.bottom-text div p:last-child a:hover {
+    color: #5D99FA;
+}
+
+@media only screen and (max-width: 1366px) {
+    .main {
+        padding-top: 40px;
+    }
+    .heading-main {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .shell {
+        padding: 0 40px;
+    }
+    .slick-slide {
+        margin: 50px 10px;
+    }
+    .carusel {
+        padding: 0 20px;
+    }
+    .carousel-block {
+        height: 239px;
+        padding: 18px;
+    }
+    .cb-link {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    .cb-image {
+        width: 100px;
+        height: 100px;
+    }
+    .cb-content h4 {
+        margin-bottom: 7px;
+    }
+    .cb-content p {
+        font-size: 15px;
+        line-height: 1.4em;
+        margin-bottom: 4px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .carousel-block {
+        height: auto;
+        min-height: 209px;
+        padding: 15px 5px;
+    }
+    .cb-content p {
+        min-height: 42px;
+        max-width: 80%;
+        margin: 0 auto 10px auto;
+        font-size: 13px;
+    }
+    .cb-link {
+        padding: 5px 15px;
+        border-radius: 6px;
+        top: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .shell {
+        padding: 0 15px;
+    }
+    .slick-slide {
+        margin: 10px 5px;
+    }
+    .carousel-block {
+        border-radius: 34px;
+    }
+    .cb-image {
+        width: 80px;
+        height: 80px;
+    }
+    .cb-image img {
+        height: 40px;
+    }
+    .cb-content h4 {
+        font-size: 22px;
+    }
+    .cb-content p {
+        max-width: none;
+    }
+    .cb-link {
+        padding: 3px 12px;
+        font-size: 13px;
+    }
+    .slick-dots {
+        margin-top: 10px;
+    }
+    .hero-image {
+        padding: 0 15%;
+        margin-bottom: 10px;
+    }
+    .heading-main {
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 30px;
+        line-height: 1.2em;
+    }
+    .bottom-text {
+        margin: 60px 0 30px 0;
+        padding: 0 10px;
+        display: block;
+    }
+    .bottom-text p {
+        font-size: 13px;
+    }
+    .bottom-text p + p {
+        margin-top: 2px;
+    }
+    .bottom-text div + div {
+        margin-top: 2px;
+    }
+    .bottom-text p a {
+        color: #4e5465;
+    }
+}
